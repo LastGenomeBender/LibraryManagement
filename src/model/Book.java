@@ -19,7 +19,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return id + ";" + title + ";" + author + ";" + genre + "\n";
+        return id + ";" + title + ";" + author + ";" + genre +  ";" + availability + "\n";
     }
 
 
@@ -57,5 +57,9 @@ public class Book {
 
     public boolean isAvailability() {
         return availability;
+    }
+
+    public void setId(String id){
+        this.id = id;
     }
 }

@@ -16,5 +16,11 @@ public class AddBookToLibrary {
       }
       if(Objects.nonNull(newBook))
                  Library.LIBRARY.getLibrary().add(newBook);
-    }
+      try {
+          WriteToFile.writeToFile();
+      }catch (Exception e){
+          throw new RuntimeException("Cannot write to file");
+      }
+
+  }
 }
