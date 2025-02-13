@@ -1,29 +1,34 @@
 package controller;
 
-import service.AddBookToLibrary;
-import service.DeleteBookFromLibrary;
-import service.RetrieveBook;
-import service.ShowAllBooks;
+import enums.Library;
+import model.Book;
+import service.*;
 
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        try {
+            ReadFromFile.readFromFile();
+        } catch (Exception e) {
+            throw new RuntimeException("Cannot read from file");
+        }
+
         Scanner scanner = new Scanner(System.in);
         while (true) {
             showMenu();
             System.out.println("Enter your choice: ");
-            int choice = scanner.nextInt();
-            if (choice == 1) {
+            String choice = scanner.nextLine();
+            if ("1".equals(choice)) {
                 AddBookToLibrary.addBook();
-            } else if (choice == 2) {
+            } else if ("2".equals(choice)) {
                 RetrieveBook.retrieveBook();
-            } else if (choice == 3) {
+            } else if ("3".equals(choice)) {
                 DeleteBookFromLibrary.deleteBook();
-            } else if (choice == 4) {
+            } else if ("4".equals(choice)) {
                 ShowAllBooks.showAllBooks();
-            } else if (choice == 5) {
+            } else if ("5".equals(choice)) {
                 System.out.println("Goodbye!");
                 break;
             } else {

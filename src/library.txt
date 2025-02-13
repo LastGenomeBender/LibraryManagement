@@ -1,0 +1,3 @@
+0;Nenem;Babam;Aile;true
+1;Eff Java;Mellim;Thriller;true
+2;javac;oracle;horror;false

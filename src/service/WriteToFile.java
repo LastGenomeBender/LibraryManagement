@@ -15,7 +15,7 @@ public class WriteToFile {
 //        }
         try (BufferedWriter br = new BufferedWriter(new FileWriter(FilePath.FILE_PATH.getFilePath(), false))) {
             for (Book book : Library.LIBRARY.getLibrary()) {
-                System.out.println(book);
+                 br.write(book.toString());
             }
         }
 
