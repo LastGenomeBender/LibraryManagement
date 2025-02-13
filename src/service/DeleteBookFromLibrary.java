@@ -13,7 +13,6 @@ public class DeleteBookFromLibrary {
         }
         catch(Exception e){
             System.out.println("Oops, an error had occurred during the scanning process\n" + e.getMessage() + "\nLet's Try again");
-            deleteBook();
             return;
         }
         while (Objects.nonNull(id)){
@@ -21,7 +20,6 @@ public class DeleteBookFromLibrary {
                 Library.LIBRARY.getLibrary().remove(Integer.parseInt(id));
             }catch (Exception e){
                 System.out.println("The object with this id does not exist\n" + e.getMessage() + "\nLet's Try again");
-                deleteBook();
                 return;
             }
         }
