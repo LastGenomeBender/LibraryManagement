@@ -1,8 +1,7 @@
 package service;
-
 import enums.Library;
 import model.Book;
-
+import java.util.Objects;
 public class AddBookToLibrary {
   public  static void addBook(){
       Book newBook = null;
@@ -15,6 +14,7 @@ public class AddBookToLibrary {
           addBook();
           return;
       }
-      Library.LIBRARY.getLibrary().add(newBook);
+      if(Objects.nonNull(newBook))
+                 Library.LIBRARY.getLibrary().add(newBook);
     }
 }

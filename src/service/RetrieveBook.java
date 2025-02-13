@@ -10,7 +10,7 @@ public class RetrieveBook {
         try {
             name =ScanBookName.scanBookName();
         }catch (Exception e){
-            System.out.println("Oops, an error had occurred during the scanning process\n" + e.getMessage() + "Let's Try again");
+            System.out.println("Oops, an error had occurred during the scanning process\n" + e.getMessage() + "\nLet's Try again");
             retrieveBook();
             return;
         }
