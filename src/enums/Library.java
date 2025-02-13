@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public enum Library {
     LIBRARY;
 
-    private ArrayList<Book> library;
+    private ArrayList<Book> library = new ArrayList<Book>();
 
     public ArrayList<Book> getLibrary() {
         return library;
